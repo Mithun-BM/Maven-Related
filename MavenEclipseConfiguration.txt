@@ -1,0 +1,10 @@
+
+Always Download or Configure --> Maven(J2EE) Integration For Eclipse WTP plugin.
+
+Step 1 - Go to windows --> Preferences --> Maven --> Installations --> Point to external installation maven folder
+
+Apply --> OK
+
+Step 2 - Go to windows --> Preferences --> Maven --> User Settings --> Point to external installation maven folder/conf/settings.xml
+
+Apply --> OK

@@ -1,0 +1,95 @@
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+MAVEN USEFUL COMMANDS
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+mvn --version     													- Gives maven version.
+
+mvn validate 														- Validates that the project is correct and all necessary information is available.
+																	  This also makes sure the dependencies are downloaded.
+																	  
+mvn initialize														- initialize build state, e.g. set properties or create directories.
+
+mvn verify 															- Run any checks to verify the package is valid and meets quality criteria.
+
+mvn package															- Packs the compiled code in its distributable format, such as a JAR.
+
+mvn deploy															- Copies the final package to the remote repository for sharing with other developers 
+																	  & projects.																  
+
+mvn eclipse:eclipse													- Converts the current project to maven eclipse project.
+
+mvn clean:eclipse													- Removes the eclipse nature of the project.
+
+mvn pre-clean														- Execute processes needed prior to the actual project cleaning.
+
+mvn clean								 							- Cleans the previous build.
+
+mvn compile	    													- Complies the build.
+
+mvn install															- Installs the build.
+
+mvn clean install 													- Cleans the previous build and installs a new build.
+
+mvn test-compile													- Compile the test source code into the test destination directory.
+
+mvn test															- Tests the entire module.
+
+mvn clean install -DskipTests						 				- Cleans the previous build and installs a new build, skips entire tests.	
+									module)	
+mvn clean install -DskipTests -Dcobertura.skip=true         		- Cleans the previous build and installs a new build, skips entire tests 
+																	  & skips coberura code coverage.
+																	  
+mvn test -Dtest=testname											- Test an individual testcase.
+
+mvn test -Dtest=testname -pl (subprojectname)				 		- Running a testcase present in a submodule.
+																	  (eg:-mvn test -Dtest=CaeConfigurationSetDAOImplTest -pl ua-cae-services-impl).
+																	  
+mvn test -Dtest=testname  											- Running a testcase in debug mode runs on 8000 port.
+
+mvn test -Dtest=testname -Dmaven.surefire.debug 					- Runs on 5005 port.
+
+mvn clean install test -Dtest=MyTestSuit -DfailIfNoTests=false
+
+mvn -DsomeModule.skip.tests=true test
+
+mvn -DsomeModule.test.includes="**/*IncludeTest.java
+
+mvn -DsomeModule.test.excludes="**/*ExcludeTest.java
+
+mvn site															- Generate the surefire reports with both success & failure tests in Site directory.
+
+mvn surefire-report:report											- Generate the surefire reports with both success & failure tests in surefire-reports.								  directory.
+
+mvn surefire-report:report -DshowSuccess=false						- To show the failures tests only.
+
+mvn surefire-report:report -DoutputDirectory=newpath				- Configuring surefire output directory.
+
+mvn cobertura:cobertura	
+					
+mvn cobertura:cobertura -DskipTests clean install 					- For creating instrumented build.
+
+mvn cobertura:cobertura -DcontextString=cobertura					- For generating coverage report.
+
+mvn pmd:pmd 														- For static analysis report.
+
+mvn clean:clean
+
+mvn compiler:compile 
+
+mvn deploy:deploy
+
+mvn resources:resources 
+
+mvn assembly:single
+
+mvn install:install 
+
+mvn sonar:sonar 													- Generates sonar project report.
+
+mvn spring-boot:run													- Starts the Spring Boot application:
+
+mvn spring-boot:run -Drun.jvmArguments="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005"
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+mvn tomcat:deploy
+
+mvn eclipse:eclipse -Dwtpversion=2.0	-    refresh the errors in eclipse					-					
